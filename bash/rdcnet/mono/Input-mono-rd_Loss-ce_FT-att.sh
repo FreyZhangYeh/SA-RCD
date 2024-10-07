@@ -1,0 +1,52 @@
+export CUDA_VISIBLE_DEVICES=7
+
+python -u src/RDCNet/train_rdcnet.py \
+--train_image_path training/nuscenes/nuscenes_train_dany_metric_predicted.txt \
+--train_radar_path training/nuscenes/nuscenes_train_radar_dilation.txt \
+--train_conf_ground_truth_path training/nuscenes/nuscenes_train_conf_gt.txt \
+--val_image_path testing/nuscenes/nuscenes_test_dany_metric_predicted.txt \
+--val_radar_path testing/nuscenes/nuscenes_test_radar_dilation.txt \
+--val_conf_ground_truth_path testing/nuscenes/nuscenes_test_conf_gt.txt \
+--batch_size 6 \
+--n_height 352 \
+--n_width 704 \
+--input_channels_image 1 \
+--input_channels_radar_depth 1 \
+--normalized_image_range 0 1 \
+--rcnet_img_encoder_type resnet34 batch_norm \
+--rcnet_dep_encoder_type resnet18 batch_norm \
+--rcnet_n_filters_encoder_image 32 64 128 256 256 256 \
+--rcnet_n_filters_encoder_depth 16 32 64 128 128 128 \
+--rcnet_fusion_type attention \
+--rcnet_fusion_layers add add add add add attention \
+--rcnet_decoder_type multiscale batch_norm \
+--rcnet_n_filters_decoder 256 256 128 64 64 32 \
+--dropout_prob 0.0 \
+--weight_initializer kaiming_uniform \
+--activation_func leaky_relu \
+--learning_rates 2e-4 \
+--learning_schedule 200 \
+--w_dense_loss 1.0 \
+--w_positive_class 10 \
+--w_conf_loss 1 \
+--w_weight_decay 0.0 \
+--augmentation_probabilities 1.00 \
+--augmentation_schedule -1 \
+--augmentation_random_crop_type horizontal vertical \
+--augmentation_random_brightness 0.80 1.20 \
+--augmentation_random_contrast 0.80 1.20 \
+--augmentation_random_saturation 0.80 1.20 \
+--augmentation_random_flip_type horizontal \
+--augmentation_random_noise_type none \
+--augmentation_random_noise_spread -1 \
+--min_evaluate_depth 0.0 \
+--max_evaluate_depth 80.0 \
+--response_thr 0.5 \
+--resultsave_dirpath trained_rdcnet \
+--n_step_per_checkpoint 20000 \
+--n_step_per_summary 5000 \
+--n_step_per_validation 100000 \
+--n_thread 8 \
+--disc Input-rd_Loss-ce_FT-att \
+--seed 40
+

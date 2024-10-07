@@ -1,0 +1,1 @@
+python -u tools/global_alignment.py

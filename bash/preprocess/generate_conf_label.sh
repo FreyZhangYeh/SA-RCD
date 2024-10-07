@@ -1,0 +1,1 @@
+python -u /home/zfy/RCMDNet/src/DSGD/generate_conf_label.py

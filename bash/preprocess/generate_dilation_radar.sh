@@ -1,0 +1,1 @@
+python -u /home/zfy/RCMDNet/src/RCMDNet/generate_dilation_radar.py

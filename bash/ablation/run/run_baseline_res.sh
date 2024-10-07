@@ -1,0 +1,31 @@
+export CUDA_VISIBLE_DEVICES=3
+
+python -u src/FusionNet/run_fusionnet.py \
+--restore_path trained_fusionnet/0719132437__Lfunc_l1_wdenseL_1.0_wlidarL_2.0_wpercepL_0.0_wsmoothness_0.0_fusiontype_add_output_type_res_total_epoch_300--Input-mono-r_Out-res_GPU_1/model-440000.pth \
+--depths_in_use radar \
+--image_path testing/nuscenes/nuscenes_test_dany_metric_predicted.txt \
+--depth_path testing/nuscenes/nuscenes_test_radar_image.txt \
+--ground_truth_path testing/nuscenes/nuscenes_test_lidar.txt \
+--input_channels_image 1 \
+--input_channels_depth 1 \
+--normalized_image_range 0 1 \
+--img_encoder_type resnet34 batch_norm \
+--dep_encoder_type resnet18 batch_norm \
+--n_filters_encoder_image 32 64 128 256 256 256 \
+--n_filters_encoder_depth 16 32 64 128 128 128 \
+--fusion_type add \
+--fusion_layers 1 2 3 4 5 6 \
+--decoder_type multiscale batch_norm \
+--output_type res \
+--dropout_prob 0.0 \
+--n_filters_decoder 256 256 128 64 64 32 \
+--n_resolutions_decoder 1 \
+--min_predict_depth 1.0 \
+--max_predict_depth 100.0 \
+--weight_initializer kaiming_uniform \
+--activation_func leaky_relu \
+--output_dirpath /data/zfy_data/nuscenes/nuscenes_derived_test_debug/virl_6-29/res-wo-radarnet-4k \
+--keep_input_filenames \
+--verbose \
+--min_evaluate_depth 0.0 \
+--max_evaluate_depth 80.0
