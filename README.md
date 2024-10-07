@@ -1,6 +1,6 @@
 # Structure-Aware Radar-Camera Depth Estimation
-<video src="./video/Intermediate Outputs.mp4" controls="controls" width="500" height="300">not support for H5</video>
 
+![Intermediate_Outputs](./fig/framework.png)
 
 ## 🚀 News
 
@@ -19,10 +19,14 @@ Schematics of the proposed SA-RCD. The framework consists of the monocular depth
 
 ![nuScenes](./fig/quantitative_comparisons.png)
 
+## Getting Starteed
+
+- To do
 
 ## Pretrained Models
 
 We provide the pretrained weights of RCANet and MSGNet on the nuScenes dataset, reproduced with the released codebase.
 
 [RCANet](https://github.com/FreyZhangYeh/SA-RCD/releases/download/checkpoints/MSGNet-480000.pth)
+
 [MSGNet](https://github.com/FreyZhangYeh/SA-RCD/releases/download/checkpoints/RCANet-870000.pth)
