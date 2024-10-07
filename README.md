@@ -1,6 +1,6 @@
 # Structure-Aware Radar-Camera Depth Estimation
 
-![Intermediate_Outputs](./fig/framework.png)
+![Intermediate_Outputs](./fig/Intermediate_Outputs.gif)
 
 ## 🚀 News
 
