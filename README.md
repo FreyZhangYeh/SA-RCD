@@ -1,6 +1,6 @@
 # Structure-Aware Radar-Camera Depth Estimation
 
-![sota_performance](./fig/SOTA_Performance.gif)
+![sota_performance](./fig/sota_performance.gif)
 
 ## 🚀 News
 
