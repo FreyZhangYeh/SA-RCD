@@ -1,6 +1,6 @@
 # Structure-Aware Radar-Camera Depth Estimation
 
-![sota_performance](./fig/tinywow_sota_performance_66361526.gif)
+![sota_performance](./fig/sota_performance-ezgif.com-video-to-gif-converter.gif)
 
 ## 🚀 News
 
@@ -18,6 +18,10 @@ Schematics of the proposed SA-RCD. The framework consists of the monocular depth
 ## Quantitative Results
 
 ![nuScenes](./fig/quantitative_comparisons.png)
+
+## Qualitative Results
+
+![nuScenes](./fig/qualitative_comparisons.png)
 
 ## Getting Starteed
 
