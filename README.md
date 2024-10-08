@@ -25,7 +25,7 @@ Schematics of the proposed SA-RCD. The framework consists of the monocular depth
 
 ![nuScenes](./fig/qualitative_comparisons.png)
 
-## Getting Starteed
+## Getting Start
 
 - To do
 
