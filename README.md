@@ -1,4 +1,4 @@
-# Structure-Aware Radar-Camera Depth Estimation
+# Structure-Aware Radar-Camera Depth Estimation (Appilacation of Large Depth Model in Radar Depth) 
 
 <p align="center">
   <img src="./fig/sota_performance-ezgif.com-video-to-gif-converter.gif" alt="SOTA Performance" style="width:120%;"/>
@@ -7,6 +7,7 @@
 ## 🚀 News
 
 - **2024.10.07** code released
+- **2025.01.28** our paper has been accepted by ICRA 2025!
 
 ## Introduction
 Radar has gained much attention in autonomous driving due to its accessibility and robustness. However, its standalone application for depth perception is constrained by issues of sparsity and noise. Radar-camera depth estimation offers a more promising complementary solution. Despite significant progress, current approaches fail to produce satisfactory dense depth maps, due to the unsatisfactory processing of the sparse and noisy radar data. They constrain the regions of interest for radar points in rigid rectangular regions, which may introduce unexpected errors and confusions. To address these issues, we develop a structure-aware strategy for radar depth enhancement, which provides more targeted regions of interest by leveraging the structural priors of RGB images. Furthermore, we design a Multi-Scale Structure Guided Network to enhance radar features and preserve detailed structures, achieving accurate and structure-detailed dense metric depth estimation. Building on these, we propose a structure-aware radar-camera depth estimation framework, named SA-RCD. Extensive experiments demonstrate that our SA-RCD achieves state-of-the-art performance on the nuScenes dataset.
